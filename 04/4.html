@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>c4</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#div1 {
+			width:200px;
+			height: 30px;
+			background: red;
+		}
+		#div2 {
+			width: 200px;
+			height: 30px;
+			background: #CCC;
+			margin: 10px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	//延时显示
+	<div id="div1">
+		
+	</div>
+	<div id="div2">
+		
+	</div>
+	<script>
+	window.onload=function(){
+		var oDiv1 = document.getElementById("div1");
+		var oDiv2 = document.getElementById("div2");
+		var timer = null;
+
+		oDiv1.onmouseover=function(){
+			oDiv2.style.display="block";
+			clearTimeout(timer);
+		};
+		oDiv1.onmouseout=function(){
+			timer=setTimeout(function(){
+				oDiv2.style.display="none";
+			},300);
+		};
+		oDiv2.onmouseover=function(){
+			clearTimeout(timer);
+		};
+		oDiv2.onmouseout=function(){
+			timer=setTimeout(function(){
+				oDiv2.style.display="none";
+			},300)
+		};
+	};
+	</script>
+</body>
+</html>
