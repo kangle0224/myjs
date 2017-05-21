@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1-4</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="div1"></div>
+	<script>
+	window.onload = function(){
+		var oDiv1 = document.getElementById("div1");
+		// current只能在IE中用
+		// firefox,chrome用getComputedStyle
+		// alert(getComputedStyle(oDiv1,false).width);
+		if(oDiv1.currentStyle){
+			alert(oDiv1.currentStyle.width);
+		}else{
+			// ff,chrome
+			alert(getComputedStyle(oDiv1,false).width);
+		}
+
+
+	};
+	</script>
+</body>
+</html>

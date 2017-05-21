@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1-2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+
+	</ul>
+	<script>
+		window.onload=function(){
+			var oUl=document.getElementById("ul1");
+			var aLi=oUl.getElementsByTagName("li");
+			var i = 0;
+
+			for(i=0;i<aLi.length;i++){
+				// console.log(aLi[i]);
+				if(i%2==0){
+					aLi[i].style.background="red";
+				};
+			};
+		};
+	</script>
+</body>
+</html>
