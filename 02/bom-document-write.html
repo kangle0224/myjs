@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<textarea id='txt1' rows="10" cols="40"></textarea>
+<input type="button" id='btn1' value='write'>
+<script>
+	window.onload=function(){
+		var oBtn=document.getElementById('btn1')
+		var oTxt=document.getElementById('txt1')
+		oBtn.onclick=function(){
+			var oNewWin=window.open('about:blank')
+			oNewWin.document.write(oTxt.value)
+		}
+	}	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id='ul1'>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+	</ul>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oUl=document.getElementById('ul1')
+
+			// IE firstChild
+			// oUl.firstChild.style.background='red'
+			// ff firstElementChild
+			// oul.firstElementChild.style.background='red'
+
+			var oFirst = oUl.firstElementChild || oUl.firstChild
+
+			oFirst.style.background='red'
+
+		}
+	</script>
+</body>
+</html>
